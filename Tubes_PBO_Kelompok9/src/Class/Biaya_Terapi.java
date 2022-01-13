@@ -5,10 +5,7 @@
  */
 package Class;
 
-/**
- *
- * @author Naufal
- */
+
 interface Biaya_Terapi {
     public void totalBiayaTerapi();
     

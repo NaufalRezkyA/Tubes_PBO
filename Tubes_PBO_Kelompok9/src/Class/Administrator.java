@@ -5,18 +5,18 @@
  */
 package Class;
 
-/**
- *
- * @author Naufal
- */
+
 public class Administrator {
     private String username;
     private String password;
     
+    // constructor kelas administrator
     public Administrator(String username, String password){
         this.username = username;
         this.password = password;
     }
+    
+    // Method verify login administrator
     public boolean verify_Login(String username, String password){
         if (username==username && password==password){
             return true;
