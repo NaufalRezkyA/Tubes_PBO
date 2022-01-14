@@ -105,6 +105,11 @@ public class Frame_RekamMedik extends javax.swing.JFrame {
         });
 
         jButton1_reset.setText("reset");
+        jButton1_reset.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1_resetMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -223,6 +228,10 @@ public class Frame_RekamMedik extends javax.swing.JFrame {
 //        farmasi.update();
 //        JOptionPane.showMessageDialog(null, "Data Berhasil Diupdate..");
     }//GEN-LAST:event_jButton4_UpdateMouseClicked
+
+    private void jButton1_resetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_resetMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1_resetMouseClicked
 
     /**
      * @param args the command line arguments

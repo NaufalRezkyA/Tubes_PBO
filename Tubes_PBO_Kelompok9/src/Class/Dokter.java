@@ -12,7 +12,7 @@ package Class;
 public class Dokter {
     private String kode_dokter,nama_dokter, email_dokter,spesialis;
     
-    public Dokter(String kode_dokter,String nama_dokter,String emial_dokter, String spesialis){
+    public Dokter(String kode_dokter,String nama_dokter,String email_dokter, String spesialis){
         this.kode_dokter = kode_dokter;
         this.nama_dokter = nama_dokter;
         this.email_dokter = email_dokter;

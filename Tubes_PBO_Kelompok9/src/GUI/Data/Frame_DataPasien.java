@@ -43,8 +43,6 @@ public class Frame_DataPasien extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel7_kodeterapi = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -69,12 +67,6 @@ public class Frame_DataPasien extends javax.swing.JFrame {
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Kode Pasien      :");
-
-        jLabel7_kodeterapi.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7_kodeterapi.setText("Kode Terapi");
-
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Kode_Terapi :");
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Tanggal Pendaftaran :");
@@ -128,7 +120,6 @@ public class Frame_DataPasien extends javax.swing.JFrame {
                             String formattedString = localDate.format(formatter);
                             jLabel6_tanggal.setText(formattedString);
 
-                            jLabel7_kodeterapi.setText(i.getKode_terapi());
                             jLabel9_nama.setText(i.getNama_pasien());
                             jLabel_dokterRujukan.setText(i.getDokter_rujukan());
                             jLabel_keluhan.setText(i.getKeluhan());
@@ -178,18 +169,11 @@ public class Frame_DataPasien extends javax.swing.JFrame {
                             .addComponent(jLabel3)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(5, 5, 5)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jLabel4))))
+                                .addComponent(jLabel4)))
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel_keluhan)
-                                    .addComponent(jLabel_dokterRujukan)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addComponent(jLabel7_kodeterapi))))
+                            .addComponent(jLabel_keluhan)
+                            .addComponent(jLabel_dokterRujukan)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addGap(18, 18, 18)
@@ -237,11 +221,7 @@ public class Frame_DataPasien extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel_dokterRujukan)
                             .addComponent(jLabel4))
-                        .addGap(47, 47, 47)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel7_kodeterapi))
-                        .addGap(58, 58, 58)
+                        .addGap(121, 121, 121)
                         .addComponent(jButton2_edit))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(78, Short.MAX_VALUE))
@@ -362,8 +342,6 @@ public class Frame_DataPasien extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6_tanggal;
-    private javax.swing.JLabel jLabel7_kodeterapi;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9_nama;
     private javax.swing.JLabel jLabel_dokterRujukan;
     private javax.swing.JLabel jLabel_keluhan;

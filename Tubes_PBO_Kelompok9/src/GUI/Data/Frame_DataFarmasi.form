@@ -78,7 +78,7 @@
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel6_harga" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel_kodePasien" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -131,7 +131,7 @@
                           <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel6_harga" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                           <Component id="jButton2" min="-2" max="-2" attributes="0"/>
@@ -161,7 +161,7 @@
                 </Property>
               </Properties>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DB_Farmasi farmasi = new DB_Farmasi(null, null, null, null, null);&#xa;ArrayList&lt;Farmasi&gt; list_farmasi = farmasi.getData();&#xa;String[] Data_Jlist = new String[100];&#xa;int i = 0;&#xa;for(Farmasi e:list_farmasi){&#xa;    Data_Jlist[i] = e.getNama_obat();&#xa;    i=i+1;&#xa;}"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DB_Farmasi farmasi = new DB_Farmasi(null, null, null, null, null);&#xa;ArrayList&lt;Farmasi&gt; list_farmasi = farmasi.getData();&#xa;String[] Data_Jlist = new String[100];&#xa;int i = 0;&#xa;for(Farmasi e:list_farmasi){&#xa;    Data_Jlist[i] = e.getNama_obat();&#xa;    i=i+1;&#xa;}&#xa;&#xa;jList1_datafarmasi.addListSelectionListener(new ListSelectionListener() {&#xa;    @Override&#xa;    public void valueChanged(ListSelectionEvent e){&#xa;        if(!e.getValueIsAdjusting()){&#xa;            for(Farmasi i:list_farmasi){&#xa;                if(i.getNama_obat() == jList1_datafarmasi.getSelectedValue()){&#xa;                    jLabel_namaObat.setText(i.getNama_obat());&#xa;                    jLabel_deskripsiObat.setText(i.getDeskripsi_obat());&#xa;                    jLabel_kodeObat.setText(i.getKode_obat());&#xa;                    jLabel_kodePasien.setText(i.getKode_pasien());&#xa;                    jLabel6_harga.setText(i.getHarga_obat());&#xa;                }&#xa;            }&#xa;        }&#xa;    }&#xa;});"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
@@ -246,7 +246,7 @@
             <Property name="text" type="java.lang.String" value="Nama Obat"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="jLabel6_harga">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>

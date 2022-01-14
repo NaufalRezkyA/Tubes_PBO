@@ -120,7 +120,7 @@ public class DB_Pasien extends Pasien{
                 this.tgl_pendaftaran = localDate;
                 
                 this.dokter_rujukan = rs.getString("dokter_rujukan");
-                
+                this.nama_pasien = rs.getString("nama_pasien");
                 list_pasien.add(new Pasien(kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien, tgl_pendaftaran,noPembayaran));
              }
             stmt.close();

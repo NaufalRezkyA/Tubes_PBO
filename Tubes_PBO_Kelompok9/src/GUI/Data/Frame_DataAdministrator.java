@@ -79,6 +79,7 @@ public class Frame_DataAdministrator extends javax.swing.JFrame {
                         if(i.getUsername() == jList1_DataAdminstrator.getSelectedValue()){
                             jLabel_username.setText(i.getUsername());
                             jLabel_password.setText(i.getPassword());
+                            jLabel4_Nama.setText(i.getUsername());
                         }
                     }
                 }

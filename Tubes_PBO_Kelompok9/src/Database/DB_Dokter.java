@@ -115,7 +115,7 @@ public class DB_Dokter {
                 this.email_dokter = rs.getString("email_dokter");
                 this.spesialis = rs.getString("spesialis");
                 
-                list_dokter.add(new Dokter(kode_dokter,nama_dokter, email_dokter,spesialis));
+                list_dokter.add(new Dokter(kode_dokter, nama_dokter, email_dokter, spesialis));
              }
             stmt.close();
             conn.close();
@@ -126,9 +126,9 @@ public class DB_Dokter {
     }
     
     public static void main(String[] args) {
-        DB_Dokter test = new DB_Dokter("DOK", "Kamil", "kamil@gmail.com", "umum");
-        test.reset();
-        System.out.println();
-        System.out.println("berhasil");
+//        DB_Dokter test = new DB_Dokter("DOK", "Kamil", "kamil@gmail.com", "umum");
+//        test.reset();
+//        System.out.println();
+//        System.out.println("berhasil");
     }
 }

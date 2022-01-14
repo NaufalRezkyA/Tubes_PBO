@@ -12,6 +12,8 @@ import GUI.Update.Frame_Farmasi;
 import GUI.Update.Frame_Home;
 import GUI.Update.Frame_Login;
 import java.util.ArrayList;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.event.ListSelectionEvent;
 
 /**
  *
@@ -47,7 +49,7 @@ public class Frame_DataFarmasi extends javax.swing.JFrame {
         jLabel_kodeObat = new javax.swing.JLabel();
         jButton_back = new javax.swing.JButton();
         jLabel_namaObat = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel6_harga = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel_deskripsiObat = new javax.swing.JLabel();
         jLabel_kodePasien = new javax.swing.JLabel();
@@ -64,6 +66,23 @@ public class Frame_DataFarmasi extends javax.swing.JFrame {
             Data_Jlist[i] = e.getNama_obat();
             i=i+1;
         }
+
+        jList1_datafarmasi.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e){
+                if(!e.getValueIsAdjusting()){
+                    for(Farmasi i:list_farmasi){
+                        if(i.getNama_obat() == jList1_datafarmasi.getSelectedValue()){
+                            jLabel_namaObat.setText(i.getNama_obat());
+                            jLabel_deskripsiObat.setText(i.getDeskripsi_obat());
+                            jLabel_kodeObat.setText(i.getKode_obat());
+                            jLabel_kodePasien.setText(i.getKode_pasien());
+                            jLabel6_harga.setText(i.getHarga_obat());
+                        }
+                    }
+                }
+            }
+        });
         jList1_datafarmasi.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jList1_datafarmasi.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = Data_Jlist;
@@ -114,8 +133,8 @@ public class Frame_DataFarmasi extends javax.swing.JFrame {
         jLabel_namaObat.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_namaObat.setText("Nama Obat");
 
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Harga");
+        jLabel6_harga.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6_harga.setText("Harga");
 
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Harga Obat     : ");
@@ -159,7 +178,7 @@ public class Frame_DataFarmasi extends javax.swing.JFrame {
                                             .addComponent(jLabel7))
                                         .addGap(18, 18, 18)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel6)
+                                            .addComponent(jLabel6_harga)
                                             .addComponent(jLabel_kodePasien))))
                                 .addGap(141, 141, 141))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -197,7 +216,7 @@ public class Frame_DataFarmasi extends javax.swing.JFrame {
                         .addGap(55, 55, 55)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
-                            .addComponent(jLabel6))
+                            .addComponent(jLabel6_harga))
                         .addGap(77, 77, 77)
                         .addComponent(jButton2))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -289,7 +308,7 @@ public class Frame_DataFarmasi extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel6_harga;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel_deskripsiObat;
     private javax.swing.JLabel jLabel_kodeObat;

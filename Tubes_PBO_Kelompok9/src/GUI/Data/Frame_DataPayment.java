@@ -83,7 +83,7 @@ public class Frame_DataPayment extends javax.swing.JFrame {
                 if (!e.getValueIsAdjusting()){
                     for(Payment i: list_Payment){
                         if (Integer.toString(i.getNopembayaran()) == jList1_DataPayment.getSelectedValue()){
-                            jLabel_noPembayaran.setText(Integer.toString(i.getNopembayaran()));
+                            jLabel_noPembayaran.setText(String.valueOf(i.getNopembayaran()));
                         }
                     }
                 }

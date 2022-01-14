@@ -112,6 +112,7 @@ public class DB_Farmasi extends Farmasi{
                 this.nama_obat = rs.getString("nama_obat");
                 this.deskripsi_obat = rs.getString("deskripsi_obat");
                 this.kode_pasien = rs.getString("kode_pasien");
+                this.harga_obat = rs.getString("harga_obat");
                 
                 list_farmasi.add(new Farmasi(kode_obat, nama_obat, deskripsi_obat, kode_pasien, harga_obat));
              }
