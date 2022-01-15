@@ -30,7 +30,7 @@ public class Frame_Home extends javax.swing.JFrame {
 
         btn_administrator = new javax.swing.JButton();
         btn_pasien = new javax.swing.JButton();
-        btn_terapi = new javax.swing.JButton();
+        btn_farmasi = new javax.swing.JButton();
         btn_dokter = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -74,20 +74,20 @@ public class Frame_Home extends javax.swing.JFrame {
         });
         getContentPane().add(btn_pasien, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 60, 132, -1));
 
-        btn_terapi.setBackground(new java.awt.Color(255, 204, 102));
-        btn_terapi.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        btn_terapi.setText("Terapi");
-        btn_terapi.addMouseListener(new java.awt.event.MouseAdapter() {
+        btn_farmasi.setBackground(new java.awt.Color(255, 204, 102));
+        btn_farmasi.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        btn_farmasi.setText("Farmasi");
+        btn_farmasi.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn_terapiMouseClicked(evt);
+                btn_farmasiMouseClicked(evt);
             }
         });
-        btn_terapi.addActionListener(new java.awt.event.ActionListener() {
+        btn_farmasi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_terapiActionPerformed(evt);
+                btn_farmasiActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 510, 123, -1));
+        getContentPane().add(btn_farmasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 510, 123, -1));
 
         btn_dokter.setBackground(new java.awt.Color(51, 255, 255));
         btn_dokter.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
@@ -191,12 +191,12 @@ public class Frame_Home extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_btn_pasienMouseClicked
 
-    private void btn_terapiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_terapiMouseClicked
+    private void btn_farmasiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_farmasiMouseClicked
         // TODO add your handling code here:
         Frame_DataFarmasi jF = new Frame_DataFarmasi();
         jF.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_btn_terapiMouseClicked
+    }//GEN-LAST:event_btn_farmasiMouseClicked
 
     private void btn_administratorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_administratorMouseClicked
         // TODO add your handling code here:
@@ -217,9 +217,9 @@ public class Frame_Home extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btn_pasienActionPerformed
 
-    private void btn_terapiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_terapiActionPerformed
+    private void btn_farmasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_farmasiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_terapiActionPerformed
+    }//GEN-LAST:event_btn_farmasiActionPerformed
 
     private void btn_administratorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_administratorActionPerformed
         // TODO add your handling code here:
@@ -263,8 +263,8 @@ public class Frame_Home extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_administrator;
     private javax.swing.JButton btn_dokter;
+    private javax.swing.JButton btn_farmasi;
     private javax.swing.JButton btn_pasien;
-    private javax.swing.JButton btn_terapi;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
