@@ -58,6 +58,7 @@ public class Frame_DataPasien extends javax.swing.JFrame {
         jButton2_edit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Data Pasien");
 
         jPanel1.setBackground(new java.awt.Color(37, 41, 88));
 

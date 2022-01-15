@@ -61,6 +61,7 @@ public class Frame_Pasien extends javax.swing.JFrame {
         btn_Psikologis = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Edit Data Pasien");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(37, 41, 88));

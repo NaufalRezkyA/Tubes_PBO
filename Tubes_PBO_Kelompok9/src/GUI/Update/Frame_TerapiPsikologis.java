@@ -50,6 +50,7 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
         jTextField1_KodeTerapi = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Edit Terapi Psikologis");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N

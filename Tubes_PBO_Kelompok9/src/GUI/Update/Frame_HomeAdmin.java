@@ -40,6 +40,7 @@ public class Frame_HomeAdmin extends javax.swing.JFrame {
         btn_dokter = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Menu Adminstrator");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(37, 41, 88));

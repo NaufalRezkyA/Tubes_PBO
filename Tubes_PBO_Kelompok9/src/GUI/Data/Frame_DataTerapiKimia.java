@@ -60,6 +60,7 @@ public class Frame_DataTerapiKimia extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Data Terapi Kimia");
 
         jPanel1.setBackground(new java.awt.Color(37, 41, 88));
 

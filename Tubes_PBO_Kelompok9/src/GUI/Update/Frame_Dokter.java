@@ -47,6 +47,7 @@ public class Frame_Dokter extends javax.swing.JFrame {
         jButton1_reset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Edit Data Dokter");
 
         jPanel1.setBackground(new java.awt.Color(37, 41, 88));
 

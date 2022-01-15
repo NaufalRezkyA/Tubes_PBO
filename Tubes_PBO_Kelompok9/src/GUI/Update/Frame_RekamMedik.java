@@ -49,6 +49,7 @@ public class Frame_RekamMedik extends javax.swing.JFrame {
         jButton1_reset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Edit Data Rekam Medik");
 
         jPanel1.setBackground(new java.awt.Color(37, 41, 88));
 

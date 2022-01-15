@@ -51,6 +51,7 @@ public class Frame_Farmasi extends javax.swing.JFrame {
         jTextField2.setText("jTextField2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Edit Data Farmasi");
 
         jPanel1.setBackground(new java.awt.Color(37, 41, 88));
 

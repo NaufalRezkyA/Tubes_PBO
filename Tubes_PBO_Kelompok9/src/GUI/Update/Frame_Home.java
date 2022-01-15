@@ -42,7 +42,7 @@ public class Frame_Home extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Puskesmas");
+        setTitle("Menu Home");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_administrator.setBackground(new java.awt.Color(204, 204, 0));
