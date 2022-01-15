@@ -134,6 +134,7 @@ public class Frame_Pasien extends javax.swing.JFrame {
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, -1, -1));
         jPanel1.add(jTextField3_KodeTerapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 520, -1));
 
+        jButton2_Add.setBackground(new java.awt.Color(153, 255, 255));
         jButton2_Add.setText("add");
         jButton2_Add.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -142,6 +143,7 @@ public class Frame_Pasien extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2_Add, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 500, -1, -1));
 
+        jButton1_reset.setBackground(new java.awt.Color(153, 204, 255));
         jButton1_reset.setText("reset");
         jButton1_reset.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -150,6 +152,7 @@ public class Frame_Pasien extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1_reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, -1, -1));
 
+        jButton3_Delete.setBackground(new java.awt.Color(204, 51, 0));
         jButton3_Delete.setText("delete");
         jButton3_Delete.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -158,6 +161,7 @@ public class Frame_Pasien extends javax.swing.JFrame {
         });
         jPanel1.add(jButton3_Delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 500, -1, -1));
 
+        jButton4_Update.setBackground(new java.awt.Color(153, 255, 153));
         jButton4_Update.setText("update");
         jButton4_Update.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

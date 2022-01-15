@@ -141,6 +141,7 @@ public class Frame_DataTerapiKimia extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jList1_DataTerapiKimia);
 
+        jButton2.setBackground(new java.awt.Color(153, 255, 255));
         jButton2.setText("Edit Data");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

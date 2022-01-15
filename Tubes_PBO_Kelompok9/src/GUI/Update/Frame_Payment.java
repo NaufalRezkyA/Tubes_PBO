@@ -72,6 +72,7 @@ public class Frame_Payment extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("PAYMENT");
 
+        jButton1_Back.setBackground(new java.awt.Color(204, 0, 0));
         jButton1_Back.setText("Back");
         jButton1_Back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -84,6 +85,7 @@ public class Frame_Payment extends javax.swing.JFrame {
             }
         });
 
+        jButton2_Add.setBackground(new java.awt.Color(153, 255, 255));
         jButton2_Add.setText("add");
         jButton2_Add.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -91,6 +93,7 @@ public class Frame_Payment extends javax.swing.JFrame {
             }
         });
 
+        jButton3_Delete.setBackground(new java.awt.Color(204, 51, 0));
         jButton3_Delete.setText("delete");
         jButton3_Delete.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -98,6 +101,7 @@ public class Frame_Payment extends javax.swing.JFrame {
             }
         });
 
+        jButton4_Update.setBackground(new java.awt.Color(153, 255, 153));
         jButton4_Update.setText("update");
         jButton4_Update.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -105,6 +109,7 @@ public class Frame_Payment extends javax.swing.JFrame {
             }
         });
 
+        jButton1_reset.setBackground(new java.awt.Color(153, 204, 255));
         jButton1_reset.setText("reset");
         jButton1_reset.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

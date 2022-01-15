@@ -79,6 +79,7 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(37, 41, 88));
 
+        jButton1_reset.setBackground(new java.awt.Color(153, 204, 255));
         jButton1_reset.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1_reset.setText("reset");
         jButton1_reset.addMouseListener(new java.awt.event.MouseAdapter() {
