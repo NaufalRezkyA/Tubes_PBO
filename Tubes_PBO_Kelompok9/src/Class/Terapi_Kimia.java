@@ -9,20 +9,11 @@ package Class;
  *
  * @author Naufal
  */
-public class Terapi_Kimia extends Terapi implements Biaya_Terapi{
+public class Terapi_Kimia{
     private String kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter;
     private Integer biaya_terapi;
 
-    public Terapi_Kimia(
-            String kode_terapi, 
-            String nama_terapi, 
-            String deskripsi_terapi, 
-            String kode_dokter, 
-            Integer biaya_terapi, 
-            String jenis_terapi, 
-            String deskripsi_penyakit, 
-            String jenis_penyakit) {
-        super(jenis_terapi, deskripsi_penyakit, jenis_penyakit, kode_terapi);
+    public Terapi_Kimia(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, Integer biaya_terapi) {
         this.kode_terapi = kode_terapi;
         this.nama_terapi = nama_terapi;
         this.deskripsi_terapi = deskripsi_terapi;
@@ -65,15 +56,5 @@ public class Terapi_Kimia extends Terapi implements Biaya_Terapi{
         System.out.println("Nama Terapi      :" + this.nama_terapi);
         System.out.println("Deskripsi Terapi :" + this.deskripsi_terapi);
         System.out.println("Kode Dokter      :" + this.kode_dokter);
-    }
-
-    @Override
-    public void totalBiayaTerapi() {
-        
-    }
-
-    @Override
-    public String informasi_terapi() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

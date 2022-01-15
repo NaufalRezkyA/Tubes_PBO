@@ -133,7 +133,7 @@ public class DB_Terapi_Kimia {
                 this.kode_dokter = rs.getString("kode_dokter");
                 this.biaya_terapi = rs.getInt("biaya_terapi");
                 
-                list_terapi_kimia.add(new Terapi_Kimia(kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, biaya_terapi, null, null, null));
+                list_terapi_kimia.add(new Terapi_Kimia(kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, biaya_terapi));
              }
             stmt.close();
             conn.close();

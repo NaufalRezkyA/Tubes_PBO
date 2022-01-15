@@ -133,7 +133,7 @@ public class DB_Terapi_Psikologis {
                 this.kode_dokter = rs.getString("kode_dokter");
                 this.biaya_terapi = rs.getInt("biaya_terapi");
                 
-                list_terapi_psikologis.add(new Terapi_Psikologis(kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, biaya_terapi, null, null, null));
+                list_terapi_psikologis.add(new Terapi_Psikologis(kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, biaya_terapi));
              }
             stmt.close();
             conn.close();

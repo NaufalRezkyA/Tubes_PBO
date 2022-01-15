@@ -35,7 +35,6 @@ public class Frame_HomeAdmin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btn_payment = new javax.swing.JButton();
         btn_rekamMedik = new javax.swing.JButton();
-        btn_terapi = new javax.swing.JButton();
         btn_terapiKimia = new javax.swing.JButton();
         btn_Psikologis = new javax.swing.JButton();
         btn_dokter = new javax.swing.JButton();
@@ -119,20 +118,6 @@ public class Frame_HomeAdmin extends javax.swing.JFrame {
             }
         });
 
-        btn_terapi.setBackground(new java.awt.Color(255, 204, 102));
-        btn_terapi.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        btn_terapi.setText("Terapi");
-        btn_terapi.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn_terapiMouseClicked(evt);
-            }
-        });
-        btn_terapi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_terapiActionPerformed(evt);
-            }
-        });
-
         btn_terapiKimia.setBackground(new java.awt.Color(255, 204, 102));
         btn_terapiKimia.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btn_terapiKimia.setText("Terapi Kimia");
@@ -191,7 +176,6 @@ public class Frame_HomeAdmin extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btn_Psikologis, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btn_terapiKimia, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_terapi, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btn_rekamMedik, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btn_payment, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -222,13 +206,11 @@ public class Frame_HomeAdmin extends javax.swing.JFrame {
                 .addComponent(btn_payment)
                 .addGap(32, 32, 32)
                 .addComponent(btn_rekamMedik)
-                .addGap(34, 34, 34)
-                .addComponent(btn_terapi)
-                .addGap(43, 43, 43)
+                .addGap(55, 55, 55)
                 .addComponent(btn_terapiKimia)
                 .addGap(27, 27, 27)
                 .addComponent(btn_Psikologis)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
@@ -303,18 +285,6 @@ public class Frame_HomeAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_rekamMedikActionPerformed
 
-    private void btn_terapiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_terapiMouseClicked
-        // TODO add your handling code here:
-        Frame_DataTerapi jF_1 = new Frame_DataTerapi();
-        jF_1.setVisible(true);
-        setVisible(false);
-    }//GEN-LAST:event_btn_terapiMouseClicked
-
-    private void btn_terapiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_terapiActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_btn_terapiActionPerformed
-
     private void btn_terapiKimiaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_terapiKimiaMouseClicked
         // TODO add your handling code here:
         Frame_DataTerapiKimia jF_1 = new Frame_DataTerapiKimia();
@@ -381,7 +351,6 @@ public class Frame_HomeAdmin extends javax.swing.JFrame {
     private javax.swing.JButton btn_pasien;
     private javax.swing.JButton btn_payment;
     private javax.swing.JButton btn_rekamMedik;
-    private javax.swing.JButton btn_terapi;
     private javax.swing.JButton btn_terapiKimia;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

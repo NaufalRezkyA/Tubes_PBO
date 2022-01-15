@@ -10,7 +10,6 @@ import Database.DB_Pasien;
 import GUI.Data.Frame_DataPayment;
 import java.time.LocalDate;
 import javax.swing.JOptionPane;
-import GUI.Data.Frame_DataTerapi;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
@@ -38,7 +37,6 @@ public class Frame_Pasien extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jButton2_Payment = new javax.swing.JButton();
-        jButton3_Terapi = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -73,16 +71,6 @@ public class Frame_Pasien extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2_Payment, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 40, 128, -1));
-
-        jButton3_Terapi.setBackground(new java.awt.Color(0, 255, 204));
-        jButton3_Terapi.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jButton3_Terapi.setText("Terapi");
-        jButton3_Terapi.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3_TerapiMouseClicked(evt);
-            }
-        });
-        jPanel1.add(jButton3_Terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, 130, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -213,13 +201,6 @@ public class Frame_Pasien extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jButton2_PaymentMouseClicked
 
-    private void jButton3_TerapiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3_TerapiMouseClicked
-        // TODO add your handling code here:
-        Frame_DataTerapi jF_3 = new Frame_DataTerapi();
-        jF_3.setVisible(true);
-        setVisible(false);
-    }//GEN-LAST:event_jButton3_TerapiMouseClicked
-
     private void jButton4_BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4_BackActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4_BackActionPerformed
@@ -336,7 +317,6 @@ public class Frame_Pasien extends javax.swing.JFrame {
     private javax.swing.JButton jButton2_Add;
     private javax.swing.JButton jButton2_Payment;
     private javax.swing.JButton jButton3_Delete;
-    private javax.swing.JButton jButton3_Terapi;
     private javax.swing.JButton jButton4_Back;
     private javax.swing.JButton jButton4_Update;
     private javax.swing.JLabel jLabel1;
