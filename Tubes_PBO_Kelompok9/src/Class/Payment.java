@@ -43,6 +43,10 @@ public class Payment {
     public String getDeskripsi_pembayaran(){
         return deskripsi_pembayaran;
     }
+
+    public String getMetodePembayaran() {
+        return metodePembayaran;
+    }
     
     public void display(){
         System.out.println("Jumlah Tagihan          :" + this.jumlah_tagihan);

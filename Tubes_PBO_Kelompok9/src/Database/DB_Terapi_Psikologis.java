@@ -37,7 +37,7 @@ public class DB_Terapi_Psikologis {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
-            String sql = "INSERT INTO terapi_psikologis VALUES('"+kode_terapi+"', '"+nama_terapi+"', '"+deskripsi_terapi+"', '"+kode_dokter+"')";
+            String sql = "INSERT INTO terapi_psikologis VALUES('"+kode_terapi+"', '"+nama_terapi+"', '"+deskripsi_terapi+"', '"+kode_dokter+"', '"+biaya_terapi+"')";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();
@@ -73,7 +73,11 @@ public class DB_Terapi_Psikologis {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
-            String sql = "UPDATE terapi_psikologis SET nama_terapi = '"+nama_terapi+"' WHERE kode_terapi = '"+kode_terapi+"'";
+            String sql = "UPDATE terapi_psikologis SET kode_terapi = '"+kode_terapi+"', "
+                    + "nama_terapi='"+nama_terapi+"', "
+                    + "deskripsi_terapi='"+deskripsi_terapi+"', "
+                    + "kode_dokter='"+kode_dokter+"', "
+                    + "biaya_terapi = '"+biaya_terapi+"' WHERE kode_terapi = '"+kode_terapi+"'";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();
@@ -117,8 +121,9 @@ public class DB_Terapi_Psikologis {
                 this.nama_terapi = rs.getString("nama_terapi");
                 this.deskripsi_terapi = rs.getString("deskripsi_terapi");
                 this.kode_dokter = rs.getString("kode_dokter");
+                this.biaya_terapi = rs.getInt("biaya_terapi");
                 
-                list_terapi_psikologis.add(new Terapi_Psikologis(kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, biaya_terapi, "Psikologis", null, null));
+                list_terapi_psikologis.add(new Terapi_Psikologis(kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, biaya_terapi, null, null, null));
              }
             stmt.close();
             conn.close();

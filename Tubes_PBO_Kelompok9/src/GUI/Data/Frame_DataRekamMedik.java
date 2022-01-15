@@ -72,7 +72,7 @@ public class Frame_DataRekamMedik extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Deskripsi Terapi :");
 
-        DB_Rekam_Medik rekamMedik = new DB_Rekam_Medik(null, null, null, null, null, null, null);
+        DB_Rekam_Medik rekamMedik = new DB_Rekam_Medik(null, null, null, null, null, null, null, null, null, null);
         ArrayList<Rekam_Medik> list_rekamMedik = rekamMedik.getData();
         String[] Data_Jlist = new String[100];
         int i=0;
@@ -80,6 +80,23 @@ public class Frame_DataRekamMedik extends javax.swing.JFrame {
             Data_Jlist[i] = e.getKode_pasien();
             i = i+1;
         }
+
+        jList1_DataRekamMedik.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e){
+                if(e.getValueIsAdjusting()){
+                    for(Rekam_Medik i:list_rekamMedik){
+                        if(i.getKode_pasien().equals(jList1_DataRekamMedik.getSelectedValue())){
+                            jLabel_kodePasien.setText(i.getKode_pasien());
+                            jLabel_kodeDokter.setText(i.getKode_dokter());
+                            jLabel_namaTerapi.setText(i.getNama_terapi());
+                            jLabel_deskripsiTerapi.setText(i.getDeskripsi_terapi());
+                            jLabel_kodeTerapi.setText(i.getKode_terapi());
+                        }
+                    }
+                }
+            }
+        });
         jList1_DataRekamMedik.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = Data_Jlist;
             public int getSize() { return strings.length; }

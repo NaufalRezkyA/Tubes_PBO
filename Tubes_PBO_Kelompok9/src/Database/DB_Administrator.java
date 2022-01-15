@@ -71,7 +71,7 @@ public class DB_Administrator {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
-            String sql = "UPDATE administrator SET password = '"+password+"' WHERE username = '"+username+"'";
+            String sql = "UPDATE administrator SET password = '"+password+"', username = '"+username+"', nama_admin = '"+nama_admin+"' WHERE username = '"+username+"'";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();

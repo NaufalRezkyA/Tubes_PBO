@@ -72,7 +72,10 @@ public class DB_Payment {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
-            String sql = "UPDATE payment SET jumlah_tagihan = '"+jumlah_tagihan+"' WHERE noPembayaran = '"+no_pembayaran+"'";
+            String sql = "UPDATE payment SET no_pembayaran = '"+no_pembayaran+"', "
+                    + "jumlah_tagihan='"+jumlah_tagihan+"', "
+                    + "deskripsi_pembayaran='"+deskripsi_pembayaran+"', "
+                    + "metodePembayaran = '"+metodePembayaran+"' WHERE noPembayaran = '"+no_pembayaran+"'";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();
@@ -129,7 +132,7 @@ public class DB_Payment {
     
     public static void main(String[] args) {
         DB_Payment test = new DB_Payment(1, 50000, "Biaya temu dan biaya obat Ibuprofen", "cash");
-        test.reset();
+        test.getData();
         System.out.println();
         System.out.println("berhasil");
     }

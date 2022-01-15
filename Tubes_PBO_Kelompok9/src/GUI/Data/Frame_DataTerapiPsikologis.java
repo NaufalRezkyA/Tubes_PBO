@@ -42,14 +42,12 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel_kodeTerapi = new javax.swing.JLabel();
         jButton_back = new javax.swing.JButton();
         jLabel_namaTerapi = new javax.swing.JLabel();
         jLabel_deskripsiTerapi = new javax.swing.JLabel();
         jLabel_kodeDokter = new javax.swing.JLabel();
-        jLabel_kodePasien = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel_biayaTerapi = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -73,9 +71,6 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Deskripsi Terapi :");
 
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Kode Pasien       :");
-
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Kode Dokter       :");
 
@@ -98,9 +93,6 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
 
         jLabel_kodeDokter.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_kodeDokter.setText("Kode Dokter");
-
-        jLabel_kodePasien.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_kodePasien.setText("Kode Pasien");
 
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Biaya Terapi       :");
@@ -126,7 +118,7 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
                             jLabel_deskripsiTerapi.setText(i.getDeskripsi_terapi());
                             jLabel_kodeDokter.setText(i.getKode_dokter());
                             jLabel_kodeTerapi.setText(i.getKode_terapi());
-
+                            jLabel_biayaTerapi.setText(String.valueOf(i.getBiaya_terapi()));
                         }
                     }
                 }
@@ -168,7 +160,6 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
                                         .addGap(11, 11, 11)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(jLabel6)
-                                            .addComponent(jLabel5)
                                             .addComponent(jLabel4)
                                             .addComponent(jLabel12)))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -179,7 +170,6 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
                                     .addComponent(jLabel_namaTerapi)
                                     .addComponent(jLabel_deskripsiTerapi)
                                     .addComponent(jLabel_kodeDokter)
-                                    .addComponent(jLabel_kodePasien)
                                     .addComponent(jLabel_biayaTerapi))))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -218,11 +208,7 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel_kodeDokter)
                             .addComponent(jLabel6))
-                        .addGap(47, 47, 47)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel_kodePasien)
-                            .addComponent(jLabel5))
-                        .addGap(47, 47, 47)
+                        .addGap(110, 110, 110)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel_biayaTerapi)
                             .addComponent(jLabel12)))
@@ -341,12 +327,10 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel_biayaTerapi;
     private javax.swing.JLabel jLabel_deskripsiTerapi;
     private javax.swing.JLabel jLabel_kodeDokter;
-    private javax.swing.JLabel jLabel_kodePasien;
     private javax.swing.JLabel jLabel_kodeTerapi;
     private javax.swing.JLabel jLabel_namaTerapi;
     private javax.swing.JList<String> jList1_DataTerapiPsikologis;

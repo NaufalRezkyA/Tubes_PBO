@@ -22,8 +22,8 @@ public class DB_Rekam_Medik extends Rekam_Medik{
 
     //constructor
 
-    public DB_Rekam_Medik(String kode_pasien, String keluhan, String dokter_rujukan, String kode_terapi, String nama_pasien, LocalDate tgl_pendaftaran, Integer noPembayaran) {
-        super(kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien, tgl_pendaftaran, noPembayaran);
+    public DB_Rekam_Medik(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, String kode_pasien, String keluhan, String dokter_rujukan, String nama_pasien, LocalDate tgl_pendaftaran, Integer noPembayaran) {
+        super(kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, kode_pasien, keluhan, dokter_rujukan, nama_pasien, tgl_pendaftaran, noPembayaran);
     }
 
     //Melakukan insert database Rekam Medik
@@ -70,7 +70,11 @@ public class DB_Rekam_Medik extends Rekam_Medik{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
-            String sql = "UPDATE rekam_medik SET nama_terapi = '"+nama_terapi+"' WHERE kode_terapi = '"+kode_terapi+"'";
+            String sql = "UPDATE rekam_medik SET kode_terapi = '"+kode_terapi+"', "
+                    + "nama_terapi='"+nama_terapi+"', "
+                    + "deskripsi_terapi='"+deskripsi_terapi+"', "
+                    + "kode_dokter='"+kode_dokter+"', "
+                    + "kode_pasien = '"+kode_pasien+"' WHERE kode_terapi = '"+kode_terapi+"'";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();
@@ -116,7 +120,14 @@ public class DB_Rekam_Medik extends Rekam_Medik{
                 this.kode_dokter = rs.getString("kode_dokter");
                 this.kode_pasien = rs.getString("kode_pasien");
                 
-                list_rekam_medik.add(new Rekam_Medik(kode_pasien, sql, kode_pasien, kode_terapi, kode_pasien, LocalDate.MIN, Integer.BYTES));
+                list_rekam_medik.add(new Rekam_Medik(
+                        kode_terapi, 
+                        nama_terapi, 
+                        deskripsi_terapi, 
+                        kode_dokter, 
+                        kode_pasien, 
+                        null, 
+                        null, null, null, null));
              }
             stmt.close();
             conn.close();
@@ -127,8 +138,20 @@ public class DB_Rekam_Medik extends Rekam_Medik{
     }
     
     public static void main(String[] args) {
-//        DB_Rekam_Medik test = new DB_Rekam_Medik(kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, kode_pasien, penyakit, dokter_rujukan, LocalDate.MIN);
-//        test.reset();
+//        DB_Rekam_Medik test = new DB_Rekam_Medik(
+//                null, 
+//                null, 
+//                null, 
+//                null, 
+//                null, 
+//                null, 
+//                null, 
+//                null, 
+//                null, 
+//                null);
+//        for(Rekam_Medik e:test.getData()){
+//            e.display();
+//        }
 //        System.out.println();
 //        System.out.println("berhasil");
     }

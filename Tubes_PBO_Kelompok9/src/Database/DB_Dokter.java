@@ -70,7 +70,7 @@ public class DB_Dokter {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
-            String sql = "UPDATE dokter SET nama_dokter = '"+nama_dokter+"' WHERE kode_dokter = '"+kode_dokter+"'";
+            String sql = "UPDATE dokter SET nama_dokter = '"+nama_dokter+"', kode_dokter = '"+kode_dokter+"', email_dokter = '"+email_dokter+"', spesialis = '"+spesialis+"' WHERE kode_dokter = '"+kode_dokter+"'";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();

@@ -36,7 +36,7 @@ public class DB_Pasien extends Pasien{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
-            String sql = "INSERT INTO pasien VALUES('"+kode_pasien+"', '"+keluhan+"', '"+tgl_pendaftaran+"', '"+dokter_rujukan+"', '"+noPembayaran+"')";
+            String sql = "INSERT INTO pasien VALUES('"+kode_pasien+"', '"+nama_pasien+"', '"+keluhan+"', '"+tgl_pendaftaran+"', '"+dokter_rujukan+"', '"+noPembayaran+"')";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();
@@ -71,7 +71,12 @@ public class DB_Pasien extends Pasien{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
-            String sql = "UPDATE pasien SET keluhan = '"+keluhan+"', tgl_pendaftaran='"+tgl_pendaftaran+"', dokter_rujukan='"+dokter_rujukan+"' WHERE kode_pasien = '"+kode_pasien+"'";
+            String sql = "UPDATE pasien SET kode_pasien = '"+kode_pasien+"', "
+                    + "nama_pasien='"+nama_pasien+"', "
+                    + "keluhan='"+keluhan+"', "
+                    + "tgl_pendaftaran='"+tgl_pendaftaran+"', "
+                    + "dokter_rujukan='"+dokter_rujukan+"', "
+                    + "noPembayaran='"+noPembayaran+"' WHERE kode_pasien = '"+kode_pasien+"'";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();
@@ -89,6 +94,8 @@ public class DB_Pasien extends Pasien{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "TRUNCATE TABLE pasien";
             System.out.println(sql);
             stmt.execute(sql);

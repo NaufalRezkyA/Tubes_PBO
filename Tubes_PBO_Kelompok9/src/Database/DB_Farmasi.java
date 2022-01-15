@@ -16,11 +16,15 @@ import java.util.ArrayList;
  *
  * @author kamil
  */
-public class DB_Farmasi extends Farmasi{
+public class DB_Farmasi {
     private String kode_obat, nama_obat,deskripsi_obat, kode_pasien, harga_obat;
 
     public DB_Farmasi(String kode_obat, String nama_obat, String deskripsi_obat, String kode_pasien, String harga_obat) {
-        super(kode_obat, nama_obat, deskripsi_obat, kode_pasien, harga_obat);
+        this.kode_obat = kode_obat;
+        this.nama_obat = nama_obat;
+        this.deskripsi_obat = deskripsi_obat;
+        this.kode_pasien = kode_pasien;
+        this.harga_obat = harga_obat;
     }
       
     //Melakukan insert database Farmasi
@@ -31,6 +35,8 @@ public class DB_Farmasi extends Farmasi{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "INSERT INTO farmasi VALUES('"+kode_obat+"', '"+nama_obat+"', '"+deskripsi_obat+"', '"+kode_pasien+"', '"+harga_obat+"')";
             System.out.println(sql);
             stmt.execute(sql);
@@ -50,6 +56,8 @@ public class DB_Farmasi extends Farmasi{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "DELETE FROM farmasi WHERE kode_obat='"+kode_obat+"'";
             System.out.println(sql);
             stmt.execute(sql);
@@ -68,7 +76,9 @@ public class DB_Farmasi extends Farmasi{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
-            String sql = "UPDATE farmasi SET nama_obat = '"+nama_obat+"' WHERE kode_obat = '"+kode_obat+"'";
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
+            String sql = "UPDATE farmasi SET kode_obat = '"+kode_obat+"', nama_obat = '"+nama_obat+"', deskripsi_obat = '"+deskripsi_obat+"', kode_pasien = '"+kode_pasien+"', harga_obat = '"+harga_obat+"' WHERE kode_obat = '"+kode_obat+"'";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();
@@ -86,6 +96,8 @@ public class DB_Farmasi extends Farmasi{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "TRUNCATE TABLE farmasi";
             System.out.println(sql);
             stmt.execute(sql);
@@ -105,6 +117,8 @@ public class DB_Farmasi extends Farmasi{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "SELECT * FROM farmasi";
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){
