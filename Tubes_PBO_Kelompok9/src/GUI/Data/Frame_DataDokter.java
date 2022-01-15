@@ -132,6 +132,7 @@ public class Frame_DataDokter extends javax.swing.JFrame {
         jLabel_spesialis.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_spesialis.setText("Spesialis");
 
+        jButton2.setBackground(new java.awt.Color(153, 255, 255));
         jButton2.setText("Edit Data");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -172,8 +173,7 @@ public class Frame_DataDokter extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(150, 150, 150)
-                        .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jButton2)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(10, 10, 10)

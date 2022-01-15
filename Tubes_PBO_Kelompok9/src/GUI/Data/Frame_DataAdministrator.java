@@ -120,6 +120,7 @@ public class Frame_DataAdministrator extends javax.swing.JFrame {
         jLabel_password.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_password.setText("Password");
 
+        jButton3_editData.setBackground(new java.awt.Color(153, 255, 255));
         jButton3_editData.setText("Edit Data");
         jButton3_editData.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -154,8 +155,8 @@ public class Frame_DataAdministrator extends javax.swing.JFrame {
                 .addGap(215, 215, 215)
                 .addComponent(jButton3_editData)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(135, 135, 135))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(108, 108, 108))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -180,8 +181,8 @@ public class Frame_DataAdministrator extends javax.swing.JFrame {
                             .addComponent(jLabel3))
                         .addGap(106, 106, 106)
                         .addComponent(jButton3_editData))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 403, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(83, Short.MAX_VALUE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
