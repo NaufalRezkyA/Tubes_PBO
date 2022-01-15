@@ -205,7 +205,7 @@ public class Frame_Pasien extends javax.swing.JFrame {
         });
         jPanel1.add(btn_terapiKimia, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 120, 140, -1));
 
-        btn_Psikologis.setBackground(new java.awt.Color(255, 204, 102));
+        btn_Psikologis.setBackground(new java.awt.Color(153, 255, 51));
         btn_Psikologis.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btn_Psikologis.setText("Terapi Psikologis");
         btn_Psikologis.addMouseListener(new java.awt.event.MouseAdapter() {

@@ -90,7 +90,7 @@ public class Frame_HomeAdmin extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Data Puskesmas");
 
-        btn_payment.setBackground(new java.awt.Color(255, 204, 102));
+        btn_payment.setBackground(new java.awt.Color(51, 204, 255));
         btn_payment.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btn_payment.setText("Payment");
         btn_payment.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -118,7 +118,7 @@ public class Frame_HomeAdmin extends javax.swing.JFrame {
             }
         });
 
-        btn_terapiKimia.setBackground(new java.awt.Color(255, 204, 102));
+        btn_terapiKimia.setBackground(new java.awt.Color(204, 255, 0));
         btn_terapiKimia.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btn_terapiKimia.setText("Terapi Kimia");
         btn_terapiKimia.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -132,7 +132,7 @@ public class Frame_HomeAdmin extends javax.swing.JFrame {
             }
         });
 
-        btn_Psikologis.setBackground(new java.awt.Color(255, 204, 102));
+        btn_Psikologis.setBackground(new java.awt.Color(204, 51, 255));
         btn_Psikologis.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btn_Psikologis.setText("Terapi Psikologis");
         btn_Psikologis.addMouseListener(new java.awt.event.MouseAdapter() {
