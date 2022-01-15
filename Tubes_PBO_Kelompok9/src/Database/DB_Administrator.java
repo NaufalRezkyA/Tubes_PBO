@@ -35,6 +35,8 @@ public class DB_Administrator {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "INSERT INTO administrator VALUES('"+username+"', '"+password+"', '"+nama_admin+"')";
             System.out.println(sql);
             stmt.execute(sql);
@@ -53,6 +55,8 @@ public class DB_Administrator {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "DELETE FROM administrator WHERE username='"+username+"'";
             System.out.println(sql);
             stmt.execute(sql);
@@ -71,6 +75,8 @@ public class DB_Administrator {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "UPDATE administrator SET password = '"+password+"', username = '"+username+"', nama_admin = '"+nama_admin+"' WHERE username = '"+username+"'";
             System.out.println(sql);
             stmt.execute(sql);
@@ -89,6 +95,8 @@ public class DB_Administrator {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "TRUNCATE TABLE administrator";
             System.out.println(sql);
             stmt.execute(sql);
@@ -108,6 +116,8 @@ public class DB_Administrator {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "SELECT * FROM administrator";
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){

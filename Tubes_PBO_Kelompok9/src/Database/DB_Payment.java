@@ -36,6 +36,8 @@ public class DB_Payment {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "INSERT INTO payment VALUES('"+no_pembayaran+"', '"+jumlah_tagihan+"', '"+deskripsi_pembayaran+"', '"+metodePembayaran+"')";
             System.out.println(sql);
             stmt.execute(sql);
@@ -54,6 +56,8 @@ public class DB_Payment {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "DELETE FROM payment WHERE noPembayaran='"+no_pembayaran+"'";
             System.out.println(sql);
             stmt.execute(sql);
@@ -72,6 +76,8 @@ public class DB_Payment {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "UPDATE payment SET no_pembayaran = '"+no_pembayaran+"', "
                     + "jumlah_tagihan='"+jumlah_tagihan+"', "
                     + "deskripsi_pembayaran='"+deskripsi_pembayaran+"', "
@@ -93,6 +99,8 @@ public class DB_Payment {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "TRUNCATE TABLE payment";
             System.out.println(sql);
             stmt.execute(sql);
@@ -112,6 +120,8 @@ public class DB_Payment {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "SELECT * FROM payment";
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){
@@ -131,9 +141,9 @@ public class DB_Payment {
     }
     
     public static void main(String[] args) {
-        DB_Payment test = new DB_Payment(1, 50000, "Biaya temu dan biaya obat Ibuprofen", "cash");
-        test.getData();
-        System.out.println();
-        System.out.println("berhasil");
+//        DB_Payment test = new DB_Payment(1, 50000, "Biaya temu dan biaya obat Ibuprofen", "cash");
+//        test.getData();
+//        System.out.println();
+//        System.out.println("berhasil");
     }
 }

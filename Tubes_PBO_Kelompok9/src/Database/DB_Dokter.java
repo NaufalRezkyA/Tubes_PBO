@@ -35,6 +35,8 @@ public class DB_Dokter {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "INSERT INTO dokter VALUES('"+kode_dokter+"', '"+nama_dokter+"', '"+email_dokter+"', '"+spesialis+"')";
             System.out.println(sql);
             stmt.execute(sql);
@@ -52,6 +54,8 @@ public class DB_Dokter {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "DELETE FROM dokter WHERE kode_dokter='"+kode_dokter+"'";
             System.out.println(sql);
             stmt.execute(sql);
@@ -70,6 +74,8 @@ public class DB_Dokter {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "UPDATE dokter SET nama_dokter = '"+nama_dokter+"', kode_dokter = '"+kode_dokter+"', email_dokter = '"+email_dokter+"', spesialis = '"+spesialis+"' WHERE kode_dokter = '"+kode_dokter+"'";
             System.out.println(sql);
             stmt.execute(sql);
@@ -88,6 +94,8 @@ public class DB_Dokter {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "TRUNCATE TABLE dokter";
             System.out.println(sql);
             stmt.execute(sql);
@@ -107,6 +115,8 @@ public class DB_Dokter {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "SELECT * FROM dokter";
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){

@@ -17,7 +17,7 @@ import java.util.ArrayList;
  *
  * @author Naufal
  */
-public class DB_Pasien extends Pasien{
+public class DB_Pasien{
     
     private String kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien;
     private LocalDate tgl_pendaftaran;
@@ -25,7 +25,13 @@ public class DB_Pasien extends Pasien{
 //    private Payment[] invoice;
 
     public DB_Pasien(String kode_pasien, String keluhan, String dokter_rujukan, String kode_terapi, String nama_pasien, LocalDate tgl_pendaftaran, Integer noPembayaran) {
-        super(kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien, tgl_pendaftaran, noPembayaran);
+        this.kode_pasien = kode_pasien;
+        this.keluhan = keluhan;
+        this.dokter_rujukan = dokter_rujukan;
+        this.kode_terapi = kode_terapi;
+        this.nama_pasien = nama_pasien;
+        this.tgl_pendaftaran = tgl_pendaftaran;
+        this.noPembayaran = noPembayaran;
     }
 
     //Melakukan insert database Pasien
@@ -36,7 +42,9 @@ public class DB_Pasien extends Pasien{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
-            String sql = "INSERT INTO pasien VALUES('"+kode_pasien+"', '"+nama_pasien+"', '"+keluhan+"', '"+tgl_pendaftaran+"', '"+dokter_rujukan+"', '"+noPembayaran+"')";
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
+            String sql = "INSERT INTO pasien VALUES('"+kode_pasien+"', '"+nama_pasien+"', '"+keluhan+"', '"+tgl_pendaftaran+"', '"+dokter_rujukan+"', "+0+")";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();
@@ -54,6 +62,8 @@ public class DB_Pasien extends Pasien{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "DELETE FROM pasien WHERE kode_pasien='"+kode_pasien+"'";
             System.out.println(sql);
             stmt.execute(sql);
@@ -71,6 +81,8 @@ public class DB_Pasien extends Pasien{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "UPDATE pasien SET kode_pasien = '"+kode_pasien+"', "
                     + "nama_pasien='"+nama_pasien+"', "
                     + "keluhan='"+keluhan+"', "
@@ -115,6 +127,8 @@ public class DB_Pasien extends Pasien{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "SELECT * FROM pasien";
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){

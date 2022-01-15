@@ -37,6 +37,8 @@ public class DB_Terapi_Psikologis {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "INSERT INTO terapi_psikologis VALUES('"+kode_terapi+"', '"+nama_terapi+"', '"+deskripsi_terapi+"', '"+kode_dokter+"', '"+biaya_terapi+"')";
             System.out.println(sql);
             stmt.execute(sql);
@@ -55,6 +57,8 @@ public class DB_Terapi_Psikologis {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "DELETE FROM terapi_psikologis WHERE kode_terapi='"+kode_terapi+"'";
             System.out.println(sql);
             stmt.execute(sql);
@@ -73,6 +77,8 @@ public class DB_Terapi_Psikologis {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "UPDATE terapi_psikologis SET kode_terapi = '"+kode_terapi+"', "
                     + "nama_terapi='"+nama_terapi+"', "
                     + "deskripsi_terapi='"+deskripsi_terapi+"', "
@@ -95,6 +101,8 @@ public class DB_Terapi_Psikologis {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "TRUNCATE TABLE terapi_psikologis";
             System.out.println(sql);
             stmt.execute(sql);
@@ -114,6 +122,8 @@ public class DB_Terapi_Psikologis {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "SELECT * FROM terapi_psikologis";
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){

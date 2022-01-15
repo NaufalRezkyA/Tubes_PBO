@@ -35,6 +35,8 @@ public class DB_Terapi{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "INSERT INTO terapi VALUES('"+kode_terapi+"','"+jenis_terapi+"', '"+jenis_penyakit+"', '"+deskripsi_penyakit+"')";
             System.out.println(sql);
             stmt.execute(sql);
@@ -52,6 +54,8 @@ public class DB_Terapi{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "DELETE FROM terapi WHERE jenis_terapi='"+jenis_terapi+"'";
             System.out.println(sql);
             stmt.execute(sql);
@@ -70,6 +74,8 @@ public class DB_Terapi{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "UPDATE terapi SET jenis_penyakit = '"+jenis_penyakit+"' WHERE jenis_terapi = '"+jenis_terapi+"'";
             System.out.println(sql);
             stmt.execute(sql);
@@ -88,6 +94,8 @@ public class DB_Terapi{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "TRUNCATE TABLE terapi";
             System.out.println(sql);
             stmt.execute(sql);
@@ -107,6 +115,8 @@ public class DB_Terapi{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "SELECT * FROM terapi";
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){

@@ -17,13 +17,17 @@ import java.util.ArrayList;
  *
  * @author kamil
  */
-public class DB_Rekam_Medik extends Rekam_Medik{
+public class DB_Rekam_Medik{
     private String kode_terapi,nama_terapi,deskripsi_terapi,kode_dokter, kode_pasien;
 
     //constructor
 
-    public DB_Rekam_Medik(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, String kode_pasien, String keluhan, String dokter_rujukan, String nama_pasien, LocalDate tgl_pendaftaran, Integer noPembayaran) {
-        super(kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, kode_pasien, keluhan, dokter_rujukan, nama_pasien, tgl_pendaftaran, noPembayaran);
+    public DB_Rekam_Medik(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, String kode_pasien) {
+        this.kode_terapi = kode_terapi;
+        this.nama_terapi = nama_terapi;
+        this.deskripsi_terapi = deskripsi_terapi;
+        this.kode_dokter = kode_dokter;
+        this.kode_pasien = kode_pasien;
     }
 
     //Melakukan insert database Rekam Medik
@@ -34,6 +38,8 @@ public class DB_Rekam_Medik extends Rekam_Medik{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "INSERT INTO rekam_medik VALUES('"+kode_terapi+"', '"+nama_terapi+"', '"+deskripsi_terapi+"', '"+kode_dokter+"', '"+kode_pasien+"')";
             System.out.println(sql);
             stmt.execute(sql);
@@ -52,6 +58,8 @@ public class DB_Rekam_Medik extends Rekam_Medik{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "DELETE FROM rekam_medik WHERE kode_terapi='"+kode_terapi+"'";
             System.out.println(sql);
             stmt.execute(sql);
@@ -70,6 +78,8 @@ public class DB_Rekam_Medik extends Rekam_Medik{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "UPDATE rekam_medik SET kode_terapi = '"+kode_terapi+"', "
                     + "nama_terapi='"+nama_terapi+"', "
                     + "deskripsi_terapi='"+deskripsi_terapi+"', "
@@ -92,6 +102,8 @@ public class DB_Rekam_Medik extends Rekam_Medik{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "TRUNCATE TABLE rekam_medik";
             System.out.println(sql);
             stmt.execute(sql);
@@ -111,6 +123,8 @@ public class DB_Rekam_Medik extends Rekam_Medik{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
+            String sqlHandleFK = "SET foreign_key_checks = 0";
+            stmt.execute(sqlHandleFK);
             String sql = "SELECT * FROM rekam_medik";
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){
