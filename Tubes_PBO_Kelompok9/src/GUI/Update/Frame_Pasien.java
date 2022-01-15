@@ -8,6 +8,8 @@ package GUI.Update;
 import Class.Payment;
 import Database.DB_Pasien;
 import GUI.Data.Frame_DataPayment;
+import GUI.Data.Frame_DataTerapiKimia;
+import GUI.Data.Frame_DataTerapiPsikologis;
 import java.time.LocalDate;
 import javax.swing.JOptionPane;
 import java.time.format.DateTimeFormatter;
@@ -55,6 +57,8 @@ public class Frame_Pasien extends javax.swing.JFrame {
         jButton3_Delete = new javax.swing.JButton();
         jButton4_Update = new javax.swing.JButton();
         jButton4_Back = new javax.swing.JButton();
+        btn_terapiKimia = new javax.swing.JButton();
+        btn_Psikologis = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -70,7 +74,7 @@ public class Frame_Pasien extends javax.swing.JFrame {
                 jButton2_PaymentMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton2_Payment, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 40, 128, -1));
+        jPanel1.add(jButton2_Payment, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 40, 140, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -186,6 +190,36 @@ public class Frame_Pasien extends javax.swing.JFrame {
         });
         jPanel1.add(jButton4_Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 103, -1));
 
+        btn_terapiKimia.setBackground(new java.awt.Color(255, 204, 102));
+        btn_terapiKimia.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        btn_terapiKimia.setText("Terapi Kimia");
+        btn_terapiKimia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_terapiKimiaMouseClicked(evt);
+            }
+        });
+        btn_terapiKimia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_terapiKimiaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_terapiKimia, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 120, 140, -1));
+
+        btn_Psikologis.setBackground(new java.awt.Color(255, 204, 102));
+        btn_Psikologis.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        btn_Psikologis.setText("Terapi Psikologis");
+        btn_Psikologis.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_PsikologisMouseClicked(evt);
+            }
+        });
+        btn_Psikologis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_PsikologisActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_Psikologis, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 80, -1, -1));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
@@ -281,6 +315,28 @@ public class Frame_Pasien extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Data Berhasil Diupdate..");
     }//GEN-LAST:event_jButton4_UpdateMouseClicked
 
+    private void btn_terapiKimiaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_terapiKimiaMouseClicked
+        // TODO add your handling code here:
+        Frame_DataTerapiKimia jF_1 = new Frame_DataTerapiKimia();
+        jF_1.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btn_terapiKimiaMouseClicked
+
+    private void btn_terapiKimiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_terapiKimiaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_terapiKimiaActionPerformed
+
+    private void btn_PsikologisMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_PsikologisMouseClicked
+        // TODO add your handling code here:
+        Frame_DataTerapiPsikologis jF_1 = new Frame_DataTerapiPsikologis();
+        jF_1.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btn_PsikologisMouseClicked
+
+    private void btn_PsikologisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_PsikologisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_PsikologisActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -317,6 +373,8 @@ public class Frame_Pasien extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_Psikologis;
+    private javax.swing.JButton btn_terapiKimia;
     private javax.swing.JButton jButton1_reset;
     private javax.swing.JButton jButton2_Add;
     private javax.swing.JButton jButton2_Payment;
