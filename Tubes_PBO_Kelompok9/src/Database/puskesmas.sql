@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2022 at 01:31 PM
+-- Generation Time: Jan 27, 2022 at 01:29 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -201,35 +201,6 @@ INSERT INTO `rekam_medik` (`kode_terapi`, `nama_terapi`, `deskripsi_terapi`, `ko
 -- --------------------------------------------------------
 
 --
--- Table structure for table `terapi`
---
-
-CREATE TABLE `terapi` (
-  `kode_terapi` varchar(20) NOT NULL,
-  `jenis_terapi` varchar(20) NOT NULL,
-  `jenis_penyakit` varchar(20) NOT NULL,
-  `deskripsi_penyakit` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `terapi`
---
-
-INSERT INTO `terapi` (`kode_terapi`, `jenis_terapi`, `jenis_penyakit`, `deskripsi_penyakit`) VALUES
-('TK01', 'Kimia', 'Kolagen', 'kumpulan penyakit jaringan ikat yang disebabkan oleh kelainan kolagen seperti persendian, pembuluh darah, dan otot.'),
-('TK02', 'Kimia', 'Cedera muskuloskelet', 'cedera pada otot maupun sendi'),
-('TK03', 'Kimia', 'Cedera otot', 'Cedera pada otot,sendi, ligamen, atau bagian lain dari sistem muskuloskeletal'),
-('TK04', 'Kimia', 'Kanker', 'Kanker adalah penyakit yang terjadi akibat pertumbuhan sel-sel abnormal yang tidak terkendali, menyebabkan jaringan tubuh normal rusak'),
-('TK05', 'Kimia', 'Asma', 'Asma adalah suatu kelainan berupa peradangan kronik saluran napas yang menyebabkan penyempitan saluran napas (hiperaktifitas bronkus) sehingga menyebabkan gejala episodik berulang berupa mengi, sesak napas, dada terasa berat, dan batuk terutama pada malam atau dini hari'),
-('TP01', 'Psikologis', 'stress ringan', 'pola pkir, emosi, dan perilaku yang tidak stabil'),
-('TP02', 'Psikologis', 'Psikis internal', 'memendam terlalu banyak masalah yang tidak disadari'),
-('TP03', 'Psikologis', 'psikis relations', 'gangguan psikis akibat masalah dalam hubungan/interaksi dengan orang lain'),
-('TP04', 'Psikologis', 'psikis family', 'gangguan psikis akibat masalah dalam keluarga'),
-('TP05', 'Psikologis', 'Depresi', 'gangguan kecemasan, masalah konsentrasi, upaya berhenti merokok, dll.');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `terapi_kimia`
 --
 
@@ -319,12 +290,6 @@ ALTER TABLE `payment`
 ALTER TABLE `rekam_medik`
   ADD KEY `kode_dokter` (`kode_dokter`,`kode_pasien`),
   ADD KEY `kode_pasien` (`kode_pasien`);
-
---
--- Indexes for table `terapi`
---
-ALTER TABLE `terapi`
-  ADD PRIMARY KEY (`kode_terapi`);
 
 --
 -- Indexes for table `terapi_kimia`
