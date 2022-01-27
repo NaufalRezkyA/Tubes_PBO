@@ -102,6 +102,7 @@ public class Frame_Login extends javax.swing.JFrame {
         DB_Administrator DB_admin = new DB_Administrator(null, null, null);
         ArrayList<Administrator> admin = DB_admin.getData();
         for (Administrator e: admin){
+            System.out.println(e.getUsername() + e.getPassword());
             if (username.equals(e.getUsername()) && password.equals(e.getPassword())){
                 status_admin = true;
                 Frame_HomeAdmin jF = new Frame_HomeAdmin();

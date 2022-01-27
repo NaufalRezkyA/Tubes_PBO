@@ -50,8 +50,6 @@ public class Frame_Pasien extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jTextField1_KodePasien1 = new javax.swing.JTextField();
         jLabel6_Tanggal = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField3_KodeTerapi = new javax.swing.JTextField();
         jButton2_Add = new javax.swing.JButton();
         jButton1_reset = new javax.swing.JButton();
         jButton3_Delete = new javax.swing.JButton();
@@ -59,6 +57,8 @@ public class Frame_Pasien extends javax.swing.JFrame {
         jButton4_Back = new javax.swing.JButton();
         btn_terapiKimia = new javax.swing.JButton();
         btn_Psikologis = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField3_NoPembayaran = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Edit Data Pasien");
@@ -129,12 +129,6 @@ public class Frame_Pasien extends javax.swing.JFrame {
         jLabel6_Tanggal.setText(formattedString);
         jPanel1.add(jLabel6_Tanggal, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Kode Terapi");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, -1, -1));
-        jPanel1.add(jTextField3_KodeTerapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 520, -1));
-
         jButton2_Add.setBackground(new java.awt.Color(153, 255, 255));
         jButton2_Add.setText("add");
         jButton2_Add.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -142,7 +136,7 @@ public class Frame_Pasien extends javax.swing.JFrame {
                 jButton2_AddMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton2_Add, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 500, -1, -1));
+        jPanel1.add(jButton2_Add, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 530, -1, -1));
 
         jButton1_reset.setBackground(new java.awt.Color(153, 204, 255));
         jButton1_reset.setText("reset");
@@ -151,7 +145,7 @@ public class Frame_Pasien extends javax.swing.JFrame {
                 jButton1_resetMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton1_reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, -1, -1));
+        jPanel1.add(jButton1_reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 530, -1, -1));
 
         jButton3_Delete.setBackground(new java.awt.Color(204, 51, 0));
         jButton3_Delete.setText("delete");
@@ -160,7 +154,7 @@ public class Frame_Pasien extends javax.swing.JFrame {
                 jButton3_DeleteMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton3_Delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 500, -1, -1));
+        jPanel1.add(jButton3_Delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 530, -1, -1));
 
         jButton4_Update.setBackground(new java.awt.Color(153, 255, 153));
         jButton4_Update.setText("update");
@@ -174,7 +168,7 @@ public class Frame_Pasien extends javax.swing.JFrame {
                 jButton4_UpdateActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4_Update, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 500, -1, -1));
+        jPanel1.add(jButton4_Update, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 530, -1, -1));
 
         jButton4_Back.setBackground(new java.awt.Color(204, 204, 0));
         jButton4_Back.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
@@ -221,6 +215,12 @@ public class Frame_Pasien extends javax.swing.JFrame {
         });
         jPanel1.add(btn_Psikologis, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 80, -1, -1));
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("No Pembayaran");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, -1, -1));
+        jPanel1.add(jTextField3_NoPembayaran, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 520, -1));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
@@ -262,10 +262,10 @@ public class Frame_Pasien extends javax.swing.JFrame {
                 jTextField1_KodePasien1.getText(), 
                 jTextField2_Keluhan.getText(), 
                 jTextField3_DokterRujukan.getText(), 
-                jTextField3_KodeTerapi.getText(), 
+                null, 
                 jTextField1_NamaPasien.getText(), 
                 LocalDate.now(),
-                null
+                Integer.parseInt(jTextField3_NoPembayaran.getText())
         );
         farmasi.insert(); 
         JOptionPane.showMessageDialog(null, "Data Berhasil Ditambahkan..");
@@ -277,7 +277,7 @@ public class Frame_Pasien extends javax.swing.JFrame {
                 jTextField1_KodePasien1.getText(), 
                 jTextField2_Keluhan.getText(), 
                 jTextField3_DokterRujukan.getText(), 
-                jTextField3_KodeTerapi.getText(), 
+                null, 
                 jTextField1_NamaPasien.getText(), 
                 LocalDate.now(),
                 null
@@ -292,7 +292,7 @@ public class Frame_Pasien extends javax.swing.JFrame {
                 jTextField1_KodePasien1.getText(), 
                 jTextField2_Keluhan.getText(), 
                 jTextField3_DokterRujukan.getText(), 
-                jTextField3_KodeTerapi.getText(), 
+                null, 
                 jTextField1_NamaPasien.getText(), 
                 LocalDate.now(),
                 null
@@ -307,10 +307,10 @@ public class Frame_Pasien extends javax.swing.JFrame {
                 jTextField1_KodePasien1.getText(), 
                 jTextField2_Keluhan.getText(), 
                 jTextField3_DokterRujukan.getText(), 
-                jTextField3_KodeTerapi.getText(), 
+                null, 
                 jTextField1_NamaPasien.getText(), 
                 LocalDate.now(),
-                null
+                Integer.parseInt(jTextField3_NoPembayaran.getText())
         );
         farmasi.update();
         JOptionPane.showMessageDialog(null, "Data Berhasil Diupdate..");
@@ -389,12 +389,12 @@ public class Frame_Pasien extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6_Tanggal;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1_KodePasien1;
     private javax.swing.JTextField jTextField1_NamaPasien;
     private javax.swing.JTextField jTextField2_Keluhan;
     private javax.swing.JTextField jTextField3_DokterRujukan;
-    private javax.swing.JTextField jTextField3_KodeTerapi;
+    private javax.swing.JTextField jTextField3_NoPembayaran;
     // End of variables declaration//GEN-END:variables
 }

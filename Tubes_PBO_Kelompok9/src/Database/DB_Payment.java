@@ -78,7 +78,7 @@ public class DB_Payment {
             Statement stmt = conn.createStatement();
             String sqlHandleFK = "SET foreign_key_checks = 0";
             stmt.execute(sqlHandleFK);
-            String sql = "UPDATE payment SET no_pembayaran = '"+no_pembayaran+"', "
+            String sql = "UPDATE payment SET noPembayaran = '"+no_pembayaran+"', "
                     + "jumlah_tagihan='"+jumlah_tagihan+"', "
                     + "deskripsi_pembayaran='"+deskripsi_pembayaran+"', "
                     + "metodePembayaran = '"+metodePembayaran+"' WHERE noPembayaran = '"+no_pembayaran+"'";

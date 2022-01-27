@@ -44,7 +44,7 @@ public class DB_Pasien{
             Statement stmt = conn.createStatement();
             String sqlHandleFK = "SET foreign_key_checks = 0";
             stmt.execute(sqlHandleFK);
-            String sql = "INSERT INTO pasien VALUES('"+kode_pasien+"', '"+nama_pasien+"', '"+keluhan+"', '"+tgl_pendaftaran+"', '"+dokter_rujukan+"', "+0+")";
+            String sql = "INSERT INTO pasien VALUES('"+nama_pasien+"', '"+kode_pasien+"', '"+keluhan+"', '"+tgl_pendaftaran+"', '"+dokter_rujukan+"', "+noPembayaran+")";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();
@@ -64,7 +64,7 @@ public class DB_Pasien{
             Statement stmt = conn.createStatement();
             String sqlHandleFK = "SET foreign_key_checks = 0";
             stmt.execute(sqlHandleFK);
-            String sql = "DELETE FROM pasien WHERE kode_pasien='"+kode_pasien+"'";
+            String sql = "DELETE FROM pasien WHERE kode_pasien='"+nama_pasien+"'";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();
@@ -83,12 +83,12 @@ public class DB_Pasien{
             Statement stmt = conn.createStatement();
             String sqlHandleFK = "SET foreign_key_checks = 0";
             stmt.execute(sqlHandleFK);
-            String sql = "UPDATE pasien SET kode_pasien = '"+kode_pasien+"', "
-                    + "nama_pasien='"+nama_pasien+"', "
+            String sql = "UPDATE pasien SET kode_pasien = '"+nama_pasien+"', "
+                    + "nama_pasien='"+kode_pasien+"', "
                     + "keluhan='"+keluhan+"', "
                     + "tgl_pendaftaran='"+tgl_pendaftaran+"', "
                     + "dokter_rujukan='"+dokter_rujukan+"', "
-                    + "noPembayaran='"+noPembayaran+"' WHERE kode_pasien = '"+kode_pasien+"'";
+                    + "noPembayaran='"+noPembayaran+"' WHERE kode_pasien = '"+nama_pasien+"'";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();
